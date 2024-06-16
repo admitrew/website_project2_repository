@@ -1,0 +1,374 @@
+body {
+    background-image:url(images/main.jpg);
+    background-size: cover;
+    width: auto;
+    height: auto;
+}
+
+.headering {
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+a.add-dictionary {
+    padding: 0%;
+}
+
+/*ФОрма для регистрации*/
+* {box-sizing: border-box;}
+
+input[type=text], input[type=email], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    border-radius: 50px;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+button.signupbtn {
+    background-color: #231d5f;
+    color: white;
+    padding: 14px 16px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    opacity: 1;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+button.signupbtn:hover{
+    opacity:1;
+}
+
+.signupbtn {
+    float: left;
+    width: 100%;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.container-form {
+padding: 16px;
+}
+
+.modal {
+display: none; /* Скрыто по умолчанию */
+position: fixed; /* Оставаться на месте */
+z-index: 1; /* Сидеть на вершине */
+left: 0;
+top: 0;
+width: 100%; /* Полная ширина */
+height: 100%; /* Полная высота */
+overflow: auto; /* Включите прокрутку, если это необходимо */
+background-color: #474e5d;
+padding-top: 50px;
+}
+
+.modal-content {
+background-color: #fefefe;
+margin: 5% auto 15% auto; /* 5% сверху, 15% снизу и по центру */
+border: 1px solid #888;
+width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+border-radius: 50px;
+}
+
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+
+.close {
+position: absolute;
+right: 35px;
+top: 15px;
+font-size: 40px;
+font-weight: bold;
+color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+color: #f44336;
+cursor: pointer;
+} 
+
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .signupbtn {
+        width: 100%;
+    }
+}
+
+.ienter {
+    width: 7%;
+    height: 64px;
+    float: right;
+    
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 150%;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+
+    background: #243368;
+    color: white;
+    border: 2px solid #243368;
+} 
+
+.ienter:hover {
+    background: white;
+    color: #243368;
+}
+
+.basic {
+    display: flex;
+    padding-left: 250px;
+
+}
+
+.lessons-container {
+    display: flex;
+    padding-top: 120px;
+    width: 60%;
+    height: 700px;
+    
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lesson1, .lesson2, .lesson3, .lesson4, .lesson5 {
+    width: 100%;
+    height: 96px;
+
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+
+    background: #2D2AAF;
+    color: white;
+    border: 2px solid #2D2AAF;
+    line-height: 20px;
+} 
+
+.lesson1:hover, .lesson2:hover, .lesson3:hover, .lesson4:hover, .lesson5:hover {
+    background: white;
+    color: #2D2AAF;
+}
+
+.btn-theory {
+    padding-top: 200px;
+    display: flex;
+    width: 30%;
+}
+
+.theory {
+    width: 100%;
+    height: 96px;
+
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+/*    line-height: 150%; 
+    display: flex; */
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+
+    background: #2D2AAF;
+    color: white;
+    border: 2px solid #2D2AAF;
+    line-height: 20px;
+} 
+
+.theory:hover {
+    background: white;
+    color: #2D2AAF;
+}
+.container-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.btn-container {
+    padding-top: 66px;
+    display: flex;
+    justify-content: space-between;
+
+    width: 600px;
+}
+.card-animation {
+    /* position: absolute; */
+    top: 25%;
+    left: 28%;
+    width: 600px;
+    height: 350px;
+}
+
+.card-inner {
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-animation.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-animation.flipped .card-front-2 {
+    display: none;
+}
+
+/* .card-animation.flipped .card-back-2 {
+    display: none;
+} */
+
+.card-front-2, .card-back-2 {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #2D2AAF;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px #2D2AAF;
+
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+}
+
+.card-front-2 {
+    background-color: #fff;
+}
+
+.card-back-2 {
+    background-color: #fff;
+    transform: rotateY(180deg);
+}
+
+button.continue {
+    /* position: absolute; */
+    top: 75%;
+    left: 28%;
+    background-color: #2D2AAF;
+    color: white;
+    padding: 14px 16px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+button.continue:hover{
+    opacity:1;
+}
+
+button.btn-dictionary {
+    /* position: absolute; */
+    top: 75%;
+    left: 49%;
+    background-color: #2D2AAF;
+    color: white;
+    padding: 14px 16px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+button.btn-dictionary:hover{
+    opacity:1;
+}
+
+.btn-dictionary, .continue{
+    float: left;
+    width: 280px;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.card-front-1, .card-back-1 {
+    position: absolute;
+    top: 28%;
+    left: 28%;
+    width: 700px;
+    height: 400px;
+    backface-visibility: hidden;
+    border: 2px solid #2D2AAF;
+    box-shadow: 0 4px 8px #2D2AAF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s;
+    border-radius: 50px;
+
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.card-front-1 {
+    background-color: #f8f8f8;
+}
+
+.card-back-1 {
+    background-color: #e8e8e8;
+    transform: rotateY(180deg);
+}
+
+.cardind.flipped .card-front-1 {
+    transform: rotateY(180deg);
+}
+
+.cardind.flipped .card-back-1 {
+    transform: rotateY(360deg);
+}

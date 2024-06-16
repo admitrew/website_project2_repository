@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+    <!-- {% block title %}Main page{% endblock %} -->
+{% block content %}
+<div class="basic">
+    <div class="lessons-container">
+        <button onclick="document.location='../lessons/lesson-1'" class="lesson1">Неправильные глаголы</button>
+        <button onclick="document.location='../lessons/lesson-2'" class="lesson2">Фразовые глаголы</button>
+        <button onclick="document.location='../lessons/lesson-3'" class="lesson3">Составление слов</button>
+        <button onclick="document.location='../lessons/lesson-4'" class="lesson4">Выбор слов</button>
+        <button onclick="document.location='../lessons/lesson-5'" class="lesson5">Синонимы</button>
+    </div>
+    <div class="btn-theory">
+        <button onclick="document.location='theory/theory-1.html'" class="theory">Теория</button>
+    </div>
+    <h1></h1>
+    <p></p>
+</div>
+{% endblock %}

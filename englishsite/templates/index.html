@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'smile-ico.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <title>English_lesson</title>
+</head>
+<body>
+    <header class="headering">
+        <div>
+            <a href="dictionary.html" style="float:right" class="dictionary">
+                <img src="{% static 'images/dictionary.jpg' %}" alt="Словарь" style="width:64px;height:64px;">
+            </a>
+            <button onclick="document.getElementById('id02').style.display='block'" class="ienter">Вход</button>
+            <div id="id02" class="modal">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Закрыть Modal">&times;</span>
+                <form class="modal-content" action="../action_page.php">
+                    <div class="container-form">
+                        <div>
+                            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float: right;" class="ienter">Зарегистрироваться</button>
+
+                            <div id="id01" class="modal">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Закрыть Modal">&times;</span>
+                            <fieldset class="modal-content" action="../action_page.php">
+                                <div class="container-form">
+                                    <h2>Форма регистрации</h2>
+                                    <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+                                    <hr>
+                        
+                                    <label for="name"><b>Имя пользователя</b></label>
+                                    <input type="text" placeholder=" Введите ваше имя" name="name" required>
+                        
+                                    <label for="email"><b>Email</b></label>
+                                    <input type="email" placeholder=" Введите Email" name="email" required>
+                                
+                                    <label for="psw"><b>Пароль</b></label>
+                                    <input type="password" placeholder=" Введите пароль" name="psw" required>
+                                
+                                    <label for="psw-repeat"><b>Повторите пароль</b></label>
+                                    <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
+                                    
+                                    <label>
+                                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Запомнить меня
+                                    </label>
+                                
+                                    <div class="clearfix">
+                        
+                                        <button type="submit" class="signupbtn">Зарегистрироваться</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            </div>
+                            <h2>Вход</h2>
+                        </div>
+                        <hr>
+            
+                        <label for="name or email"><b>Имя пользователя или email</b></label>
+                        <input type="text" placeholder=" Введите ваше имя или email" name="name or email" required>
+                    
+                        <label for="psw"><b>Пароль</b></label>
+                        <input type="password" placeholder=" Введите пароль" name="psw" required>
+                    
+                        <div class="clearfix">
+            
+                            <button type="submit" class="signupbtn">Войти</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <script src="{% static 'script.js' %}"></script>
+
+</body>
+</html>
