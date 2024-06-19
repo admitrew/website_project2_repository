@@ -6,19 +6,19 @@
   <div class="card-animation">
     <div class="card-inner">
       <div class="card-front-2">
-          <p>{{ ru }}</p>
+          <p class="phrasal">{{ ru }}</p>
       </div>
       <div class="card-back-2">
-          <p>{{ eng }}</p>
+          <p class="phrasal">{{ eng }}</p>
       </div>
     </div>
   </div>
   <div class="btn-container">
-    <button type="submit" class="continue">Далее</button>
+    <button type="submit" onclick="document.location='../lessons/lesson-2'" class="continue">Далее</button>
     <button type="submit" class="btn-dictionary">Добавить в словарь</button>
   </div>
 
 </div>
-
+<button onclick="document.location='../main'" class="btn-back">← Назад</button>
 {% endblock %}
 

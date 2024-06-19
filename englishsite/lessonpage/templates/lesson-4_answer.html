@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+{% load static %}
+    <!-- {% block title %}Main page{% endblock %} -->
+{% block content %}
+    <div class="container-card"> 
+      <div class="card-word-choice">
+        <h2> {{ word_in_eng }} </h2>
+        <div class="words">
+          <div class="rows">
+            <div class="text-display-blue">
+              {{ option1 }}
+            </div>
+            <div class="text-display-blue">
+              {{ option2 }}
+            </div>
+          </div>
+          <div class="rows">
+            <div class="text-display-red">
+              {{ option3 }}
+            </div>
+            <div class="text-display-green">
+              {{ option4 }}
+            </div>
+          </div>
+        </div>
+
+      </div>
+        <div class="btn-container">
+          <button type="submit" onclick="document.location='../lessons/lesson-4'" class="continue">Далее</button>
+          <button type="submit" class="btn-dictionary">Добавить в словарь</button>
+        </div>
+    </div>
+    <button onclick="document.location='../main'" class="btn-back">← Назад</button>
+</body>
+{% endblock %}

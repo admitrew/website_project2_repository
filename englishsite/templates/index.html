@@ -9,14 +9,15 @@
     <link rel="shortcut icon" href="{% static 'smile-ico.ico' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    <title>English_lesson</title>
+    <title>Веб-приложение для изучения иностранного языка</title>
 </head>
 <body>
     <header class="headering">
         <div>
-            <a href="dictionary.html" style="float:right" class="dictionary">
+            <a href="../dictionary" style="float:right" class="dictionary">
                 <img src="{% static 'images/dictionary.jpg' %}" alt="Словарь" style="width:64px;height:64px;">
             </a>
+            <!-- NOT WORKING REGISTRATION -->
             <button onclick="document.getElementById('id02').style.display='block'" class="ienter">Вход</button>
             <div id="id02" class="modal">
                 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Закрыть Modal">&times;</span>
@@ -50,8 +51,12 @@
                                     </label>
                                 
                                     <div class="clearfix">
-                        
-                                        <button type="submit" class="signupbtn">Зарегистрироваться</button>
+                                        <form method="post" action="{% url 'register' %}">
+                                            {% csrf_token %}
+                                            {{ form.as_p }}
+                                            <button type="submit" class="signupbtn">Зарегистрироваться</button>
+                                        </form>
+                    
                                     </div>
                                 </div>
                             </fieldset>

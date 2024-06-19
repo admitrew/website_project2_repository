@@ -1,8 +1,7 @@
 body {
     background-image:url(images/main.jpg);
     background-size: cover;
-    width: auto;
-    height: auto;
+    background-repeat: no-repeat;
 }
 
 .headering {
@@ -149,6 +148,7 @@ display: table;
 .basic {
     display: flex;
     padding-left: 250px;
+    justify-content: space-around;
 
 }
 
@@ -200,8 +200,6 @@ display: table;
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
-/*    line-height: 150%; 
-    display: flex; */
     align-items: center;
     text-align: center;
     border-radius: 50px;
@@ -216,15 +214,75 @@ display: table;
     background: white;
     color: #2D2AAF;
 }
+
 .container-card {
     display: flex;
+    padding-top: 200px;
+    padding-left: 600px;
     flex-direction: column;
-    width: 100%;
+    width: 60%;
+    height: 600px;
     align-items: center;
-    min-height: 100vh;
+    backface-visibility: hidden;
+
     justify-content: center;
+
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
 }
 
+.btn-back {
+    width: 15%;
+    height: 72px;
+
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+
+    background: #2D2AAF;
+    color: white;
+    border: 2px solid #2D2AAF;
+    line-height: 20px;
+} 
+
+.btn-back:hover {
+    background: white;
+    color: #2D2AAF;
+}
+.btn-back-theory {
+    position: fixed;
+    bottom: 0;
+    left: 4;
+
+    width: 15%;
+    height: 65px;
+
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+
+    background: #2D2AAF;
+    color: white;
+    border: 2px solid #2D2AAF;
+    line-height: 20px;
+} 
+
+.btn-back-theory:hover {
+    background: white;
+    color: #2D2AAF;
+}
 .btn-container {
     padding-top: 66px;
     display: flex;
@@ -233,15 +291,11 @@ display: table;
     width: 600px;
 }
 .card-animation {
-    /* position: absolute; */
-    top: 25%;
-    left: 28%;
     width: 600px;
     height: 350px;
 }
 
 .card-inner {
-    /* position: relative; */
     width: 100%;
     height: 100%;
     transition: transform 0.6s;
@@ -256,12 +310,7 @@ display: table;
     display: none;
 }
 
-/* .card-animation.flipped .card-back-2 {
-    display: none;
-} */
-
 .card-front-2, .card-back-2 {
-    /* position: absolute; */
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
@@ -288,9 +337,6 @@ display: table;
 }
 
 button.continue {
-    /* position: absolute; */
-    top: 75%;
-    left: 28%;
     background-color: #2D2AAF;
     color: white;
     padding: 14px 16px;
@@ -307,9 +353,6 @@ button.continue:hover{
 }
 
 button.btn-dictionary {
-    /* position: absolute; */
-    top: 75%;
-    left: 49%;
     background-color: #2D2AAF;
     color: white;
     padding: 14px 16px;
@@ -334,41 +377,267 @@ button.btn-dictionary:hover{
     font-size: 25px;
 }
 
-.card-front-1, .card-back-1 {
-    position: absolute;
-    top: 28%;
-    left: 28%;
-    width: 700px;
-    height: 400px;
-    backface-visibility: hidden;
-    border: 2px solid #2D2AAF;
-    box-shadow: 0 4px 8px #2D2AAF;
-    display: flex;
+.card-irregular-verb {
+    width: 60%;
     flex-direction: column;
+    display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.6s;
+
+
+    border: 1px solid #2D2AAF;
+    border-radius: 50px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white; 
+    box-shadow: 0 4px 8px #2D2AAF;
+}
+.card-irregular-verb h2 {
+    margin-top: 0;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+}
+.card-irregular-verb input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px #2D2AAF;
+}
+
+.card-irregular-verb button {
+    background-color: #2D2AAF;
+    color: white;
+    padding: 14px 16px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
     border-radius: 50px;
 
     font-family: 'Poiret One';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 25px;
+}
+.card-irregular-verb button:hover {
+    background-color: #2D2AAF;
 }
 
-.card-front-1 {
-    background-color: #f8f8f8;
+.container-theory {
+    width: 100%;
 }
 
-.card-back-1 {
-    background-color: #e8e8e8;
-    transform: rotateY(180deg);
+.table-irregular-verbs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+
+    border-radius: 10px;
 }
 
-.cardind.flipped .card-front-1 {
-    transform: rotateY(180deg);
+.table-phrasal-verbs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+
+    border-radius: 10px;
 }
 
-.cardind.flipped .card-back-1 {
-    transform: rotateY(360deg);
+td, th {
+    border: 2px solid #2D2AAF;
+    text-align: left;
+    padding: 8px;
 }
+
+.text-display-right {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    border-radius: 50px;
+    background: #f1f1f1;
+
+    
+    box-shadow: 0 4px 8px #00ff88;
+}
+
+.text-display-wrong {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    border-radius: 50px;
+    background: #f1f1f1;
+
+    
+    box-shadow: 0 4px 8px #ff0000;
+}
+
+.text-display:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-irregular-verb {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+p {
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: justify;
+}
+
+p.phrasal {
+    font-size: 38px;
+}
+
+li {
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: justify;
+}
+h1 {
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    border-radius: 50px;
+    background-color: #2D2AAF;
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+}
+
+.card-word-choice {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    border: 1px solid #2D2AAF;
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white; 
+    box-shadow: 0 4px 8px #2D2AAF;
+}
+
+.btn-choice, .text-display-blue {
+    display: flex;
+    margin-right: 15px;
+    margin-bottom: 22px;
+    width: 230px;
+    border: none;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    border-radius: 50px;
+
+    border: 1px solid #2D2AAF;
+    border-radius: 50px;
+    padding: 20px;
+
+    background-color: white; 
+    box-shadow: 0 4px 8px #2D2AAF;
+}
+
+.text-display-green {
+    display: flex;
+    margin-right: 15px;
+    margin-bottom: 22px;
+    width: 230px;
+    border: none;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    border-radius: 50px;
+
+    border: 1px solid #2D2AAF;
+    border-radius: 50px;
+    padding: 20px;
+
+    background-color: white; 
+    box-shadow: 0 4px 8px #1eca32;
+}
+
+.text-display-red {
+    display: flex;
+    margin-right: 15px;
+    margin-bottom: 22px;
+    width: 230px;
+    border: none;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    border-radius: 50px;
+
+    border: 1px solid #2D2AAF;
+    border-radius: 50px;
+    padding: 20px;
+
+    background-color: white; 
+    box-shadow: 0 4px 8px #eb2d02;
+}
+
+.btn-choice:hover {
+    background-color: #f3efef;
+}
+
+.rows {
+    display: flex;
+}
+

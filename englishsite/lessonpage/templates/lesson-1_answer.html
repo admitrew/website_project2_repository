@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+{% load static %}
+    <!-- {% block title %}Main page{% endblock %} -->
+{% block content %}
+<div class="container-card"> 
+  <div class="card-irregular-verb">
+    <h2> {{ word }} </h2>
+    {% if useranswer1 == realanswer1 %}
+    <label for="base-form"> Infinitive: </label>
+    <div class="text-display-right card-irregular-verb">
+      "{{ useranswer1 }}" is correct
+    </div>
+    {% else %}
+    <label for="base-form"> Infinitive: </label>
+    <div class="text-display-wrong card-irregular-verb">
+      "{{ useranswer1 }}"  is incorrect, answer is "{{ realanswer1 }}"
+    </div>
+    {% endif %}
+    
+    {% if useranswer2 == realanswer2 %}
+    <label for="past-simple"> Past simple: </label>
+    <div class="text-display-right card-irregular-verb">
+      "{{ useranswer2 }}" is correct
+    </div>
+    {% else %}
+    <label for="past-simple"> Past simple: </label>
+    <div class="text-display-wrong card-irregular-verb">
+      "{{ useranswer2 }}" is incorrect, answer is "{{ realanswer2 }}" 
+    </div>
+    {% endif %}
+    
+    {% if useranswer3 == realanswer3 %}
+    <label for="past-participle"> Past participle: </label>
+    <div class="text-display-right card-irregular-verb">
+      "{{ useranswer3 }}" is correct
+    </div>
+    {% else %}
+    <label for="past-participle"> Past participle: </label>
+    <div class="text-display-wrong card-irregular-verb">
+      "{{ useranswer3 }}" is incorrect, answer is "{{ realanswer3 }}"
+    </div>
+    {% endif %}
+  </div>
+  <div class="btn-container">
+      <button type="submit" onclick="document.location='../lessons/lesson-1'" class="continue">Далее</button>
+      <button type="submit" class="btn-dictionary">Добавить в словарь</button>
+  </div>
+</div>
+
+<button onclick="document.location='../main'" class="btn-back">← Назад</button>
+{% endblock %}
+
+
+    

@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% load static %}
+    <!-- {% block title %}Main page{% endblock %} -->
+{% block content %}
+    <div class="container-card"> 
+      <div class="card-word-choice">
+        <h2> {{ word_in_eng }} </h2>
+        <form method="POST" action="{% url 'handle_button' %}">
+          {% csrf_token %}
+          <div class="words">
+            <div class="rows">
+              <button type="submit" class="btn-choice" value="1">{{ option1 }}</button>
+              <button type="submit" class="btn-choice" value="2">{{ option2 }}</button>
+            </div>
+            <div class="rows">
+              <button type="submit" class="btn-choice" value="3">{{ option3 }}</button>
+              <button type="submit" class="btn-choice" value="4">{{ option4 }}</button>
+            </div>
+          </div>
+        </form>
+      </div>
+        <div class="btn-container">
+          <button type="submit" onclick="document.location='../lessons/lesson-4'" class="continue">Пропустить</button>
+          <button type="submit" class="btn-dictionary">Добавить в словарь</button>
+        </div>
+    </div>
+    <button onclick="document.location='../main'" class="btn-back">← Назад</button>
+</body>
+{% endblock %}

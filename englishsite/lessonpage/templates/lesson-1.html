@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% load static %}
+    <!-- {% block title %}Main page{% endblock %} -->
+{% block content %}
+    <div class="container-card"> 
+
+        <div class="card-irregular-verb">
+            <h2> {{ word }} </h2>
+            <form method="post" class="form-irregular-verb">
+                {% csrf_token %}
+                {{ form.target }}
+                {{ form.infinitive.label_tag }}
+                {{ form.infinitive }}
+                {{ form.past_simple.label_tag }}
+                {{ form.past_simple }}
+                {{ form.past_participle.label_tag }}
+                {{ form.past_participle }}
+                <button type="submit">Проверить</button>
+            </form>
+        </div>
+
+        <div class="btn-container">
+            <button type="submit" onclick="document.location='../lessons/lesson-1'" class="continue">Пропустить</button>
+            <button type="submit" class="btn-dictionary">Добавить в словарь</button>
+        </div>
+    </div>
+<button onclick="document.location='../main'" class="btn-back">← Назад</button>
+{% endblock %}
+

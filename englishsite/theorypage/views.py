@@ -3,7 +3,6 @@ from django.http import HttpResponse
 from django.template import loader
 
 # Create your views here.
-def theoryview(request):
-    template = loader.get_template("../templates/index.html")
-    context = {}
-    return HttpResponse(template.render(context, request))
+def theory1view(request):
+    template = loader.get_template("theory-1.html")
+    return render(request, 'theory-1.html')

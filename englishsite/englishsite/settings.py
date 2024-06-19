@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'lessonpage.apps.LessonpageConfig',
     'mainpage.apps.MainpageConfig',
-    # 'theorypage.apps.TheorypageConfig',
+    'theorypage.apps.TheorypageConfig',
 ]
 
 MIDDLEWARE = [
@@ -84,6 +84,7 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'mainpage.CustomUser' # CUSTOM MODEL FOR AUTHENTICATION
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
